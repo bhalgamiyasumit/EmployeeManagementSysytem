@@ -30,15 +30,15 @@ public class EmployeeService {
      * @return Message Response
      */
     public MessageResponse createEmp(Employee employee) {
-            Employee newemp = new Employee();
-            newemp.setDepartmentMaster(employee.getDepartmentMaster());
-            newemp.setEmailId(employee.getEmailId());
-            newemp.setEmpAdress(employee.getEmpAdress());
-            newemp.setEmpName(employee.getEmpName());
-            newemp.setMobileNumber(employee.getMobileNumber());
-            newemp.setPassword(employee.getPassword());
-            newemp.setSalary(employee.getSalary());
-            employeeRepository.save(newemp);
+            Employee newEmp = new Employee();
+        newEmp.setDepartmentMaster(employee.getDepartmentMaster());
+        newEmp.setEmailId(employee.getEmailId());
+        newEmp.setEmpAdress(employee.getEmpAdress());
+        newEmp.setEmpName(employee.getEmpName());
+        newEmp.setMobileNumber(employee.getMobileNumber());
+        newEmp.setPassword(employee.getPassword());
+        newEmp.setSalary(employee.getSalary());
+            employeeRepository.save(newEmp);
             return new MessageResponse("Employee Added Successfully !!!");
         }
     /**
